@@ -32,9 +32,13 @@ async function fetchPlayerName() {
         Accept: "application/json",
       },
     });
+    console.log(results);
+
+    
   } catch (error) {}
 
   name = results.data;
+
 
   nameHeader.innerHTML = `<h1>${name.first_name} ${name.last_name}</h1>`;
 }
@@ -50,16 +54,23 @@ async function fetchStats() {
         Accept: "application/json",
       },
     });
+    
 
+    
     stats = results.data.data[0];
+    if(stats == undefined){
+        alert("DID NOT PLAY THIS YEAR")
+    } else{
+        
+        statsContainer.innerHTML = `<div class = "stat-player">
+            <h2>${stats.season}</h2>
+            <p>${stats.pts} Points Per Game</p>
+            <p>${stats.reb} Rebounds Per Game</p>
+            <p>${stats.ast} Assists Per Game</p>
+            </div>`;
+    }
     console.log(stats);
 
-    statsContainer.innerHTML = `<div class = "stat-player">
-        <h2>${stats.season}</h2>
-        <p>${stats.pts} Points Per Game</p>
-        <p>${stats.reb} Rebounds Per Game</p>
-        <p>${stats.ast} Assists Per Game</p>
-        </div>`;
   } catch (error) {
     console.log(error);
   }

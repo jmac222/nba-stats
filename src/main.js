@@ -36,7 +36,7 @@ submitForm.addEventListener('submit', async (e) => {
         const tempPlayers = playerNames.map(player => {
            
             return `<div class = "player">
-            <h1>${player.first_name} ${player.last_name}</h1>
+            <h2>${player.first_name} ${player.last_name}</h2>
             <a onclick = "findId('${player.id}')" href = "stats.html">See Stats</a>
             <div class = "stats"></div>
             </div>`
