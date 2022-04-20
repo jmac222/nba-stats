@@ -3,11 +3,15 @@ const inputChange = document.querySelector('.search')
 const submitForm = document.querySelector('.form-submit')
 const playerContainer = document.querySelector('.player-container')
 const playerFinder = document.querySelector('.player')
-var idPlayer = ''
+let idPlayer = ''
+
 
 function findId(id){
     idPlayer = id
-    submitForm.innerHTML += idPlayer
+    sessionStorage.setItem("id", idPlayer)
+    
+    
+    
     
     
 }
@@ -31,9 +35,9 @@ submitForm.addEventListener('submit', async (e) => {
 
         const tempPlayers = playerNames.map(player => {
            
-            return `<div class = "player" onclick = "findId('${player.id}')">
+            return `<div class = "player">
             <h1>${player.first_name} ${player.last_name}</h1>
-            <a href = "stats.html">See Stats</a>
+            <a onclick = "findId('${player.id}')" href = "stats.html">See Stats</a>
             <div class = "stats"></div>
             </div>`
         })
@@ -51,4 +55,8 @@ submitForm.addEventListener('submit', async (e) => {
 
     
     
+    console.log(idPlayer)
 })
+
+
+

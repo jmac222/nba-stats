@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stats.css" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Hello</h1>
-</body>
+  </head>
+  <body>
+    <h1>Advanced Stats</h1>
+    <div class="dropdown">
+      <button class="dropbtn">Season</button>
+      <div class="dropdown-content">
+        <p class="year2021">2021</p>
+        <p class="year2020">2020</p>
+        <p class="year2019">2019</p>
+      </div>
+    </div>
+    <div class="nameHeader"></div>
+    <div class="stats"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+      integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script defer src="stats.js"></script>
+  </body>
 </html>
