@@ -4,6 +4,8 @@ const statsContainer = document.querySelector(".stats");
 const year2021 = document.querySelector(".year2021");
 const year2020 = document.querySelector(".year2020");
 const year2019 = document.querySelector(".year2019");
+const year2018 = document.querySelector(".year2018");
+const year2017 = document.querySelector(".year2017");
 const nameHeader = document.querySelector(".nameHeader");
 let year = "2021";
 
@@ -18,6 +20,14 @@ year2020.onclick = () => {
 };
 year2019.onclick = () => {
   year = "2019";
+  fetchStats();
+};
+year2018.onclick = () => {
+  year = "2018";
+  fetchStats();
+};
+year2017.onclick = () => {
+  year = "2017";
   fetchStats();
 };
 

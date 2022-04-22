@@ -38,11 +38,11 @@ submitForm.addEventListener('submit', async (e) => {
             return `<div class = "player">
             <h2>${player.first_name} ${player.last_name}</h2>
             <a onclick = "findId('${player.id}')" href = "stats.html">See Stats</a>
-            <div class = "stats"></div>
+            
             </div>`
         })
 
-        playerContainer.innerHTML = tempPlayers
+        playerContainer.innerHTML = tempPlayers.join(' ')
 
         // playerNames.map(each => playerContainer.innerHTML += each.first_name)
         // playerContainer.innerHTML = playerNames

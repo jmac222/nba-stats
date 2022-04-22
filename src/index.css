@@ -4,10 +4,13 @@ body {
   
   max-width: 45rem;
   margin: auto;
+  background-color: rgb(36, 40, 47);
 }
+
 
 h1{
   text-align: center;
+  color: whitesmoke;
 }
 .form-submit{
   display: flex;
@@ -48,20 +51,27 @@ button:hover{
 }
 
 .player{
-  background-color: rgb(16, 15, 37);
+  background-color: rgb(60, 62, 68);
   width: 175px;
   margin: 10px;
   padding: 5px;
   border-radius: 10px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 .player h2{
   color: white;
+  text-align: center;
 }
 
 .player a{
   text-decoration: none;
   color: white;
   font-size: 16px;
+  text-align: center;
 
 }
 
